@@ -10,7 +10,7 @@ public class Ex1_4 {
         int[] answer = {(int)((float)denum1/num1 + (float)denum2/num2),denum1/num1 + denum2/num2};
         System.out.println((float)denum1/num1);
         System.out.println((float)denum2/num2);
-        System.out.println((float)denum1/num1 + (float)denum2/num2);
+        System.out.println(((float)denum1/num1+(float)denum2/num2)*4);
 
        // System.out.println((float)denum1/num1 + (float)denum2/num2);
 
