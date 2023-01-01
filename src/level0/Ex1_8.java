@@ -1,5 +1,7 @@
 package level0;
 
+import java.util.Arrays;
+
 public class Ex1_8 {
     public static void main(String[] args) {
                  // {5,4,3,2,1}
@@ -9,12 +11,12 @@ public class Ex1_8 {
 
 
 
+        arr1 = new int[arr.length];
 
-        arr1 = arr;
         for( int i=0; i<arr.length ; i++) {
 
-            arr1[i] = arr[4-i];
-            System.out.println(arr1[i]);
+            arr1[i] = arr[arr.length-i-1];
+
         }
 //        for(int i=0; i< arr.length ; i++) {
 //
