@@ -1,4 +1,4 @@
-package level0;
+package level0.page1;
 
 public class Ex1_5 {
     public static void main(String[] args) {
