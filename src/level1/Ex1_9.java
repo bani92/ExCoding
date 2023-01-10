@@ -2,45 +2,35 @@ package level1;
 
 public class Ex1_9 {
     public static void main(String[] args) {
-        int num = 16;
-        int answer = 0;
-        int a = 0;
-        int b = 0;
-//        while(true) {
-//            if(num%2==0) {
-//                num /= 2;
-//            } else if(num==1) {
-//               answer = 0;
-//               break;
-//            } else if(num%2!=0) {
-//                num = num * 3 +1;
-//            } else if(a==500) {
-//                answer = -1;
-//                break;
-//            }
-//            a++;
-//            System.out.println(num);
-//            System.out.println("a="+a);
-//        }
+      int num = 626331;
+      int answer = 0 ;
+      long n = num;
+      int a = 0;
 
-        while(true) {
-            if(num%2==0) {
-                num /= 2;
-            } else if(num==1) {
-                break;
-            } else if(num%2!=0) {
-                num = num * 3 + 1;
+      if(n==1) {
+          answer = 0;
+      }
+      while(true) {
+          if(n%2==0) {
+              n = n /2;
 
+          }  else if(n==1) {
+              System.out.println("a" + a);
+              break;
+          } else if(n%2!=0) {
+              n = n * 3 + 1;
+          }
+          System.out.println("n = " + n);
 
-            }
-            b++;
-            System.out.println(num);
-            System.out.println("B="+b);
-//            if(b==500 && num!=1) {
-//
-//            }
-        }
-
+         if(a==500 && n!=1) {
+             answer = -1;
+             System.out.println("마지막 ="+answer);
+             break;
+         }
+         a++;
+         answer = a;
+          System.out.println("answer = " + answer);
+      }
 
 
 
