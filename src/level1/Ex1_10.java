@@ -2,7 +2,7 @@ package level1;
 
 public class Ex1_10 {
     public static void main(String[] args) {
-        String[] seoul = {"jane","kim","jain"}
+        String[] seoul = {"jane","kim","jain"};
         String answer = "";
         int x = 0;
 
