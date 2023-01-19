@@ -2,11 +2,13 @@ package level2.page1;
 
 public class Ex2_3 {
     public static void main(String[] args) {
-        String s = "3Pop UNFOllow me";
+        String s = "3Pop   UNFOllow  me";
         String answer = "";
-        s = s.replaceAll("\\s+"," ");
+        // 공백이 있더라도 결과물은 다르게
+//        s = s.replaceAll("\\s+"," ");
         // 텍스트 띄워쓰기로 나누기
-        String[] b = s.split(" ");
+
+        String[] b = s.split("\\s+");
 
 
         for(int i=0; i<b.length; i++) {
