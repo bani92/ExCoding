@@ -2,30 +2,37 @@ package level2.page1;
 
 public class Ex2_3_1 {
     public static void main(String[] args) {
-        String s = "3Pop   UNFOllow  me";
+        String s = "aaaaa     aaa ";
+        s = s.toLowerCase();
         String answer = "";
+        System.out.println(s);
+        String a[] = new String[s.length()];
 
-        String[] s1 = {""};
-        char[] arr = new char[s.length()];
-
+        // String 배열로 만들고 배열에 한 글자씩 담기
+        // 문자
         for(int i=0; i<s.length() ; i++) {
-                arr[i] = s.charAt(i);
-            System.out.print(arr[i]);
+            a[i] = String.valueOf(s.charAt(i));
+
         }
-
-        // 첫글자인지 아닌지 어떻게 알지?
-        // 맨처음글자는 알수있음(arr[0])
-        // 문자다음 빈칸이 나오면 해당 문자를
+        System.out.println(s.length());
         for(int i=0; i<s.length() ; i++) {
+            if(a[i].equals(" ")) {
+                a[i+1] = a[i+1].toUpperCase();
+            } else if(s.charAt(0) >= 'a' && s.charAt(0) <= 'z') {
+                a[0] = a[0].toUpperCase();
+            } else if(a[i].equals(" ") && a[s.length()].equals(" ")) {
 
-            if(arr[i]!=' ') {
-                s1[0] += arr[i];
-                System.out.println(s1[0]);
             }
 
         }
 
-       // 3Pop을 어떻게 알지?
+
+        for(int i=0 ;i<s.length() ;i++) {
+           answer += a[i];
+        }
+        System.out.println(answer);
+
+
 
 
 

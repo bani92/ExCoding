@@ -8,6 +8,29 @@ public class Ex2_3 {
 //        s = s.replaceAll("\\s+"," ");
         // 텍스트 띄워쓰기로 나누기
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         String[] b = s.split("\\s+");
 
 
