@@ -8,26 +8,24 @@ import java.util.Set;
 public class Ex1_26 {
     public static void main(String[] args) {
         int[] arr = {1,1,3,3,0,1,1};
-        int[] answer;
+        int[] answer = {};
+        int a = -1;
+        ArrayList list = new ArrayList();
 
-        ArrayList arrayStatck = new ArrayList();
 
-        arrayStatck.add(arr[0]);
-        System.out.println(arrayStatck.get(0));
-        for(int i=1; i<arr.length ; i++) {
-            while(arrayStatck.get(i-1)==null) {
-                i--;
-
-            }
-            int a = (int) arrayStatck.get(i-1);
-            System.out.println(a);
+        for(int i=0; i<arr.length; i++) {
             if(a!=arr[i]) {
-               arrayStatck.add(arr[i]);
+                list.add(arr[i]);
+                a = arr[i];
             }
+
         }
-
-
-        System.out.println(arrayStatck);
+        System.out.println(list);
+      answer = new int[list.size()];
+      for(int i=0; i<list.size(); i++) {
+          answer[i] = (int) list.get(i);
+          System.out.println(answer[i]);
+      }
 
 
 
