@@ -1,19 +1,25 @@
 package level1.page2;
 
+import java.util.Arrays;
+
 public class Ex1_30 {
     public static void main(String[] args) {
         int[] d = {1,3,2,5,4};
         int budget = 9;
         int result = 0;
-        for(int i=0; i<d.length-2 ; i++)
-            for(int j=1; j<d.length-1 ; j++)
-                for(int k=2 ; k<d.length ; k++) {
+        int a = 0;
+        Arrays.sort(d);
+        for(int i=0 ;i<d.length ; i++) {
 
-                    if((d[i] + d[j] + d[k])<=budget) {
-                        System.out.println("i = " + i + " j = " + j + " k = " + k);
-                        result++;
-                    }
-                }
-        System.out.println(result);
+            result += d[i];
+            if(result > budget) {
+                a = i;
+                break;
+            }
+        }
+        if(result <= budget) {
+            a = d.length;
+        }
+        System.out.println(a);
     }
 }
