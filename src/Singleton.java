@@ -2,17 +2,16 @@
 
 public class Singleton {
 
-    public static Singleton instance;
+    private static Singleton instance;
 
-    private Singleton() { }
+    private Singleton() {}
 
     public static Singleton getInstance() {
-        if(instance == null) {
+        if(instance==null) {
             instance = new Singleton();
         }
         return instance;
     }
-
 }
 
 // 어떤 클래스가 최초 한 번만 메모리를 할당하고(static) 그 메모리에 객체를 생성하여 이후에는
