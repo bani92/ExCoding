@@ -1,3 +1,5 @@
+package etc;
+
 public class Random {
     public static void main(String[] args) {
         int Num[] = new int[6];

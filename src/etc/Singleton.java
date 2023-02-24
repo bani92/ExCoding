@@ -1,4 +1,4 @@
-
+package etc;
 
 public class Singleton {
 
@@ -12,6 +12,7 @@ public class Singleton {
         }
         return instance;
     }
+
 }
 
 // 어떤 클래스가 최초 한 번만 메모리를 할당하고(static) 그 메모리에 객체를 생성하여 이후에는

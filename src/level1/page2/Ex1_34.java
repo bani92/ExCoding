@@ -31,12 +31,23 @@ public class Ex1_34 {
 
         for(int i=0; i<strings.length ;i++) {
             for(int j=0; j< strings.length ; j++) {
-                if(String.valueOf(strings[j].charAt(n)).equals(s1.get(i))) {
-                 answer[i]  = strings[j];
-                    System.out.println(answer[i]);
+                if(String.valueOf(strings[j].charAt(n)).equals(s1.get(i))) { // 배열안의 문장에 1자릿수를 비교하여 맞으면 answer[i] 에 담김
+                    // 같으니깐 여기로 들어왔지
+                    if(answer[i].charAt(n+1)!=strings[j].charAt(n+1)) {
+
+                    } else {
+                        answer[i]  = strings[j];
+                    }
+
+
+                   // System.out.println(answer[i]);
+
+                    // 정렬하면 1,2  , 2 3 , 1 2 3
+                    // int a = 0; a = 2가 되면
                 }
             } // 안쪽 for문
         } // 바깥쪽 for문
-
+        System.out.println(answer[0]);
+        System.out.println(s1);
     }
 }
