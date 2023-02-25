@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Ex1_34 {
     public static void main(String[] args) {
-        String[] strings = {"abcd","abce","cdx"};
+        String[] strings = {"abce","abcd","cdx"};
         int n = 2;
        // char[] s = new char[strings.length];
         List<String> s1 = new ArrayList<>(strings.length);
@@ -25,19 +25,34 @@ public class Ex1_34 {
 
 //        // 배열과 한번씩 비교
 //        s1.get(0); strings[0] , [1] , [2]
-//        s1.get(1);
-//        s1.get(2);
+//        s1.get(1); strings[0] , [1] , [2]
+//        s1.get(2); strings[0] , [1] , [2]
 //        System.out.println(strings[0].substring(1, 1));
-
+        System.out.println(s1);
         for(int i=0; i<strings.length ;i++) {
             for(int j=0; j< strings.length ; j++) {
                 if(String.valueOf(strings[j].charAt(n)).equals(s1.get(i))) { // 배열안의 문장에 1자릿수를 비교하여 맞으면 answer[i] 에 담김
                     // 같으니깐 여기로 들어왔지
-                    if(answer[i].charAt(n+1)!=strings[j].charAt(n+1)) {
 
-                    } else {
+                    // 조건을 뭐라고 걸지?
+
+
+                    System.out.print("get(i) = " + i);
+                    System.out.print(" j = " + j);
+                    System.out.print(" "+strings[j]);
+                    System.out.println();
                         answer[i]  = strings[j];
-                    }
+                        if(answer[i]!=null && (answer[i].substring(0,n)).equals(strings[j].substring(0,n))) {
+                            // 널이 아니면 안에 있는 answer 값과 string 값을 비교?
+                            if(answer[i].charAt(n+1)<strings[j].charAt(n+1)) {
+                                answer[i+1] = strings[j];
+                            }
+
+                        } else {
+                            // 널이면 값을 넣고
+                            answer[i]  = strings[j];
+                        }
+
 
 
                    // System.out.println(answer[i]);
@@ -47,7 +62,9 @@ public class Ex1_34 {
                 }
             } // 안쪽 for문
         } // 바깥쪽 for문
+
         System.out.println(answer[0]);
-        System.out.println(s1);
+        System.out.println(answer[1]);
+        System.out.println(answer[2]);
     }
 }
