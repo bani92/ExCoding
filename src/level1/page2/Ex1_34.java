@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Ex1_34 {
     public static void main(String[] args) {
-        String[] strings = {"abce","abcd","cdx"};
+        String[] strings = {"abce","abcd","abcg"};
         int n = 2;
        // char[] s = new char[strings.length];
         List<String> s1 = new ArrayList<>(strings.length);
@@ -41,11 +41,21 @@ public class Ex1_34 {
                     System.out.print(" j = " + j);
                     System.out.print(" "+strings[j]);
                     System.out.println();
-                        answer[i]  = strings[j];
-                        if(answer[i]!=null && (answer[i].substring(0,n)).equals(strings[j].substring(0,n))) {
+
+                        if(answer[i]!=null && (answer[i].substring(0,n)).equals(strings[j].substring(0,n)) && (!answer[i].equals(strings[j]))) {
                             // 널이 아니면 안에 있는 answer 값과 string 값을 비교?
-                            if(answer[i].charAt(n+1)<strings[j].charAt(n+1)) {
-                                answer[i+1] = strings[j];
+                            System.out.println("answer의 값 " +answer[i]);
+                            System.out.println("strings 값 " +strings[j]);
+                            System.out.println("answer n+1 " + answer[i].charAt(n+1));
+                            System.out.println("strings n+1 " + strings[j].charAt(n+1));
+
+                            if(answer[i].charAt(n+1)>strings[j].charAt(n+1)) {
+
+
+
+                                   // answer[i+1] = answer[i];
+                                    answer[i]  = strings[j];
+                                    i++;
                             }
 
                         } else {
@@ -54,7 +64,7 @@ public class Ex1_34 {
                         }
 
 
-
+                    System.out.println();
                    // System.out.println(answer[i]);
 
                     // 정렬하면 1,2  , 2 3 , 1 2 3
