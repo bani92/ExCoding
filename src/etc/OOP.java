@@ -2,24 +2,38 @@ package etc;
 
 public class OOP {
 
-    private int age;
-    private String name;
+   private String name;
+   private int age;
 
-    public OOP() {}
-    public OOP(int age, String name) {
-        this.age = age;
+   public OOP() {
+   }
+    public OOP(String name, int age) {
         this.name = name;
+        this.age = age;
     }
 
-    public void print() {
-        System.out.println("age = " + age + " name = " + name);
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void birthday() {
+        this.age++;
     }
 }
 
 class main {
     public static void main(String[] args) {
-        OOP oop = new OOP(5,"홍길동");
-        oop.print();
+       OOP person = new OOP("홍길동",20);
+        System.out.println(person.getName() + " - " + person.getAge());
+
+        person.birthday();
+        person.birthday();
+
+        System.out.println(person.getName() + " - " + person.getAge());
     }
 }
 
