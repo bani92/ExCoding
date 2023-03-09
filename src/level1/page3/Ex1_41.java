@@ -12,9 +12,12 @@ public class Ex1_41 {
             answer += n/a;
           n =  n - (a * (n/a)) + n/a;
             System.out.println(n);
+            if(n==5) {
+                answer += 1;
+            }
 
         }
 
-       // System.out.println(answer);
+        System.out.println(answer);
     }
 }
