@@ -1,6 +1,7 @@
 package level1.page3;
 
 public class Ex1_41 {
+    // 콜라 문제
     public static void main(String[] args) {
         int a = 2;
         int b = 1;
