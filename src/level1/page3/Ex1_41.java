@@ -8,13 +8,11 @@ public class Ex1_41 {
         int answer = 0;
 
 
-        while(n > a) {
-            answer += n/a;
-          n =  n - (a * (n/a)) + n/a;
-            System.out.println(n);
-            if(n==5) {
-                answer += 1;
-            }
+        while(n/a > 0) {
+            answer += n/a*b;
+          n =  n - (a * (n/a)) + n/a * b;
+            System.out.println("n의 값 : " + n);
+
 
         }
 
