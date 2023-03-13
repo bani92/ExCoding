@@ -30,5 +30,6 @@ public class Ex1 {
 
         System.out.println(a[0]);
         System.out.println(a[1]);
+
     }
 }

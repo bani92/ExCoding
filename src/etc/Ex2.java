@@ -1,30 +1,41 @@
 package etc;
 
+import com.sun.jdi.Value;
+
+import java.util.Objects;
+
 public class Ex2 {
-        // polymorphism
-    public int minus(int a, int b) {
-        return a-b;
-    }
+        // equals
+
     public static void main(String[] args) {
-        Ex2 ex2 = new Ex2();
-        System.out.println(ex2.minus(1,2));
 
-        Ex2 ex3 = new Ex222();
-        System.out.println(ex3.minus(1,2));
+        Value1 v1 = new Value1(10);
+        Value1 v2 = new Value1(10);
 
-        Ex222 ex222 = new Ex222();
-        System.out.println(ex222.minus(1,2));
+        if (v1.equals(v2)) {
+            System.out.println("같습니다");
+        } else {
+            System.out.println("다릅니다");
+        }
     }
 }
 
-class Ex222 extends Ex2 {
 
-    public int add(int a , int b) {
-        return a+b;
+class Value1 {
+
+    int Value1;
+     Value1(int Value1) {
+        this.Value1 = Value1;
+    }
+
+    public boolean equals(Object obj) {
+         if(!(obj instanceof Value1)) return false;
+
+         return this.Value1 == ((Value1)obj).Value1;
     }
 
     @Override
-    public int minus(int a, int b) {
-        return a-b;
+    public int hashCode() {
+        return Objects.hash(Value1);
     }
 }
