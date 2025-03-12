@@ -1,4 +1,4 @@
-package new_202503;
+package new_202503.day1;
 
 public class 접미사인지확인하기 {
     public int solution(String my_string, String is_suffix) {

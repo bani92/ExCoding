@@ -1,4 +1,4 @@
-package new_202503;
+package new_202503.day1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

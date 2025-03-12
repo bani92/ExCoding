@@ -1,4 +1,4 @@
-package new_202503;
+package new_202503.day1;
 
 public class 문자열의앞의n글자 {
     public String solution(String my_string, int n) {
